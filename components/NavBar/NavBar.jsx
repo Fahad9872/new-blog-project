@@ -301,7 +301,7 @@ const NavBar = () => {
             </div>
 
             {/* Success Story */}
-            <div onClick={() => router.push(`/success-stories`)}>
+            <div onClick={() => router.push(`/our-work`)}>
               <p
                 className={`${text} text-[#000000] text-[16px] mx-3 cursor-pointer py-5`}
               >
