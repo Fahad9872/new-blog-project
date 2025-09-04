@@ -8,12 +8,12 @@ import {
 
 export const Footer = () => {
   return (
-    <footer className="relative text-white mt-16">
+    <footer className="relative text-white bg-black mt-16">
       {/* Top Divider Shape */}
       {/* Top Divider Shape */}
 
       {/* Footer Content */}
-      <div className="px-6 pt-20 pb-10 bg-black relative z-10">
+      <div className="px-6 pt-20 pb-10 max-w-[1400px] mx-auto relative z-10">
         <div className="absolute -top-[1px] left-0 w-full overflow-hidden leading-[0]">
           <svg
             className="w-full rotate-180"

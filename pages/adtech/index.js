@@ -7,10 +7,19 @@ import TabSection from "@/components/Home/TabSection";
 import BannerSection from "@/components/OurWork/BannerSection";
 import MediaEnterprises from "@/components/AdTech/MediaEnterprises";
 import ScrollCards from "@/components/AdTech/ScrollCards";
+import SuccessStory from "@/components/AdTech/SuccessStory";
+import Services from "@/components/AdTech/Services";
+import Faq from "@/components/Shared/Faq";
+import FaqSection from "@/components/AdTech/FaqSection";
+import GlobalClients from "@/components/AdTech/GlobalClients";
+import AdTechInsights from "@/components/AdTech/AdTechInsights";
+import CTASection from "@/components/AdTech/CTASection";
+import History from "@/components/About/HIstory";
 
 const heroData = {
   title: "Transform Your Business with Innovation 🚀",
-  subtitle: "We deliver AI, Cloud, and Modernization solutions that empower your growth.",
+  subtitle:
+    "We deliver AI, Cloud, and Modernization solutions that empower your growth.",
   buttonText: "Get Started",
   gradient: "from-purple-600 to-pink-500",
   textColor: "text-white",
@@ -32,9 +41,9 @@ export default function Adtech() {
 
   // Animation math
   const progress = Math.min(scrollY / heroHeight, 1);
-  const heroTranslateY = progress * heroHeight;        // move up to its full height
-  const heroOpacity = Math.max(1 - progress, 0);       // fade out as you scroll
-  const heroClickable = heroOpacity > 0.3;             // stop catching clicks once mostly faded
+  const heroTranslateY = progress * heroHeight; // move up to its full height
+  const heroOpacity = Math.max(1 - progress, 0); // fade out as you scroll
+  const heroClickable = heroOpacity > 0.3; // stop catching clicks once mostly faded
 
   return (
     <div className="relative">
@@ -48,7 +57,9 @@ export default function Adtech() {
           "flex items-center justify-center text-center rounded-b-lg",
           "px-6 md:px-12 bg-gradient-to-r",
           heroData.gradient,
-          heroClickable ? "pointer-events-auto z-30" : "pointer-events-none z-0",
+          heroClickable
+            ? "pointer-events-auto z-30"
+            : "pointer-events-none z-0",
         ].join(" ")}
         style={{
           height: `${heroHeight}px`,
@@ -59,7 +70,9 @@ export default function Adtech() {
         }}
       >
         <div className="max-w-3xl">
-          <h1 className={`text-3xl md:text-6xl font-bold mb-4 ${heroData.textColor}`}>
+          <h1
+            className={`text-3xl md:text-6xl font-bold mb-4 ${heroData.textColor}`}
+          >
             {heroData.title}
           </h1>
           <p className={`text-lg md:text-xl mb-6 ${heroData.textColor}`}>
@@ -76,8 +89,16 @@ export default function Adtech() {
 
       {/* Page content */}
       <div className="w-full max-w-[1400px] mx-auto px-3 md:px-6 relative z-10">
+        <SuccessStory />
+        <Services />
+        <FaqSection />
+        <GlobalClients />
+        <History />
+        <AdTechInsights />
+        <ScrollCards />
         <MediaEnterprises />
-        <ScrollCards/>
+        <CTASection />
+        <ContactSection />
         <Footer />
       </div>
     </div>

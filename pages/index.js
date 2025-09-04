@@ -45,7 +45,7 @@ export default function Home() {
       <ChooseOstello />
       <ClientChatter />
       <LatestInsights />
-      <TabSection />
+
       {/* <EducationalResources /> */}
       {/* <Faq /> */}
       <ContactSection />
